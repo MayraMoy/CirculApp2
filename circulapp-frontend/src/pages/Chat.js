@@ -15,8 +15,6 @@ import {
   TextField,
   IconButton,
   Badge,
-  Divider,
-  Alert,
   Paper,
   Chip,
 } from '@mui/material';
@@ -186,7 +184,7 @@ const Chat = () => {
     <Container maxWidth="xl" sx={{ py: 4, height: 'calc(100vh - 200px)' }}>
       <Grid container spacing={2} sx={{ height: '100%' }}>
         {/* Lista de chats */}
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <Box sx={{ p: 2 }}>
               <Typography variant="h6" gutterBottom>
@@ -219,7 +217,7 @@ const Chat = () => {
         </Grid>
 
         {/* Área de chat */}
-        <Grid item xs={12} md={8}>
+        <Grid size={{ xs: 12, md: 8 }}>
           <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             {activeChat ? (
               <>

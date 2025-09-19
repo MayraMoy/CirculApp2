@@ -24,6 +24,8 @@ import { CloudUpload, Delete, ArrowBack, Save } from '@mui/icons-material';
 import { useAuth } from '../context/AuthContext';
 import { productService, createFormData } from '../services/api';
 
+const _createFormData = createFormData; // Asegurarse de usar la función correcta
+
 const CreateProduct = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
@@ -242,7 +244,7 @@ const CreateProduct = () => {
               />
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{xs:12}}>
               <TextField
                 fullWidth
                 multiline
@@ -259,7 +261,7 @@ const CreateProduct = () => {
               />
             </Grid>
 
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs:12, sm:6 }}>
               <FormControl fullWidth required error={!!errors.category}>
                 <InputLabel>Categoría</InputLabel>
                 <Select
@@ -278,7 +280,7 @@ const CreateProduct = () => {
               </FormControl>
             </Grid>
 
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs:12, sm:6 }}>
               <FormControl fullWidth required error={!!errors.condition}>
                 <InputLabel>Condición</InputLabel>
                 <Select
@@ -298,13 +300,13 @@ const CreateProduct = () => {
             </Grid>
 
             {/* Ubicación */}
-            <Grid item xs={12}>
+            <Grid size={{ xs:12 }}>
               <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
                 Ubicación
               </Typography>
             </Grid>
 
-            <Grid item xs={12}>
+            <Grid size={{ xs:12 }}>
               <TextField
                 fullWidth
                 name="location.address"
@@ -317,7 +319,7 @@ const CreateProduct = () => {
               />
             </Grid>
 
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs:12, sm:6 }} >
               <TextField
                 fullWidth
                 name="location.city"
@@ -327,7 +329,7 @@ const CreateProduct = () => {
               />
             </Grid>
 
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs:12, sm:6 }}>
               <TextField
                 fullWidth
                 name="location.province"
@@ -338,7 +340,7 @@ const CreateProduct = () => {
             </Grid>
 
             {errors.coordinates && (
-              <Grid item xs={12}>
+              <Grid size={{ xs:12 }}>
                 <Alert severity="warning">
                   {errors.coordinates}. Usando coordenadas de Buenos Aires por defecto.
                 </Alert>
@@ -346,7 +348,7 @@ const CreateProduct = () => {
             )}
 
             {/* Imágenes */}
-            <Grid item xs={12}>
+            <Grid size={{ xs:12 }}>
               <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
                 Imágenes (Opcional)
               </Typography>
@@ -404,7 +406,7 @@ const CreateProduct = () => {
             </Grid>
 
             {/* Botones de acción */}
-            <Grid item xs={12}>
+            <Grid size={{ xs:12 }}>
               {loading && <LinearProgress sx={{ mb: 2 }} />}
 
               <Box sx={{ display: 'flex', gap: 2, justifyContent: 'flex-end' }}>

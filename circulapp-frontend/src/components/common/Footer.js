@@ -62,7 +62,7 @@ const Footer = () => {
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           {/* Sección de marca */}
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
             <FooterSection>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                 <Typography
@@ -119,7 +119,7 @@ const Footer = () => {
           </Grid>
 
           {/* Soporte */}
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid size={{xs:12, sm:6, md:3}}>
             <FooterSection>
               <FooterTitle>Soporte</FooterTitle>
               <Box>
@@ -132,7 +132,7 @@ const Footer = () => {
           </Grid>
 
           {/* Legal */}
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid size={{ xs:12, sm:6, md:3}}>
             <FooterSection>
               <FooterTitle>Legal</FooterTitle>
               <Box>

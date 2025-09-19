@@ -23,6 +23,15 @@ import Footer from './components/common/Footer';
 import LoadingSpinner from './components/common/LoadingSpinner';
 import ErrorBoundary from './components/common/ErrorBoundary';
 
+// Crear las rutas en App.js
+import Help from './pages/Help';
+import Contact from './pages/Contact';
+import FAQ from './pages/FAQ';
+import ReportProblem from './pages/ReportProblem';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
+import Cookies from './pages/Cookies';
+
 // Tema personalizado mejorado con Poppins
 const theme = createTheme({
   palette: {
@@ -490,6 +499,15 @@ const AppRoutes = () => {
         }
       />
 
+      {/* Nuevas rutas informativas */}
+      <Route path="/help" element={<Help />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/faq" element={<FAQ />} />
+      <Route path="/report-problem" element={<ReportProblem />} />
+      <Route path="/terms" element={<Terms />} />
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/cookies" element={<Cookies />} />
+      
       {/* Ruta 404 */}
       <Route
         path="*"
