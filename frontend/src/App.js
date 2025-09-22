@@ -503,7 +503,7 @@ const AppRoutes = () => {
       <Route path="/help" element={<Help />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/faq" element={<FAQ />} />
-      <Route path="/report-problem" element={<ReportProblem />} />
+      <Route path="/report" element={<ReportProblem />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/privacy" element={<Privacy />} />
       <Route path="/cookies" element={<Cookies />} />
