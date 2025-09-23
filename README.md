@@ -1,6 +1,6 @@
 # 🌱 Circulapp
 
-**Plataforma de Economía Colaborativa para Gestión Integral de Materiales**
+**Plataforma de Economía Colaborativa para Gestión Integral de Materiales.**
 
 [![Licencia](https://img.shields.io/badge/Licencia-MIT-blue.svg)](LICENSE)
 [![Estado](https://img.shields.io/badge/Estado-En%20Desarrollo-yellow.svg)]()
